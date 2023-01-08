@@ -22,6 +22,7 @@ async function getBooks(a) {
       numberOfPagesCell.innerHTML= book.numberOfPages;
       isbnCell.innerHTML = book.isbn;
        let date = new Date(book.released);
+        console.log(book.released,'211111', date.toDateString(),"DATE")
       releasedDate.innerHTML = date.toDateString();
       
     });
