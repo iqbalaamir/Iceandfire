@@ -21,7 +21,8 @@ async function getBooks(a) {
       publisherCell.innerHTML = book.publisher;
       numberOfPagesCell.innerHTML= book.numberOfPages;
       isbnCell.innerHTML = book.isbn;
-      releasedDate.innerHTML = book.released;
+       let date = new Date(book.released);
+      releasedDate.innerHTML = date.toDateString();
       
     });
     } catch (error) {
