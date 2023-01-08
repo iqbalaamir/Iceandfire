@@ -21,9 +21,10 @@ async function getBooks(a) {
       publisherCell.innerHTML = book.publisher;
       numberOfPagesCell.innerHTML= book.numberOfPages;
       isbnCell.innerHTML = book.isbn;
-       let date = new Date(book.released);
-        console.log(book.released,'211111', date.toDateString(),"DATE")
-      releasedDate.innerHTML = date.toDateString();
+        var date = new Date('1996-08-01T00:00:00');
+        var month = date.toLocaleString('default', { month: 'long' });
+        var formattedDate = month + ' ' + date.getDate() + ', ' + date.getFullYear();
+      releasedDate.innerHTML = formattedDate;
       
     });
     } catch (error) {
