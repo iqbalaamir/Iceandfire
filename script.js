@@ -21,10 +21,8 @@ async function getBooks(a) {
       publisherCell.innerHTML = book.publisher;
       numberOfPagesCell.innerHTML= book.numberOfPages;
       isbnCell.innerHTML = book.isbn;
-        var date = new Date('1996-08-01T00:00:00');
-        var month = date.toLocaleString('default', { month: 'long' });
-        var formattedDate = month + ' ' + date.getDate() + ', ' + date.getFullYear();
-      releasedDate.innerHTML = formattedDate;
+        var date = new Date(book.released);
+      releasedDate.innerHTML = date.toDateString();
       
     });
     } catch (error) {
